@@ -14,6 +14,6 @@ connectDatabase(process.env.DB_URL).then(() => {
 });
 app.use("/api/users", userRouter);
 app.use("/api/team", teamRouter);
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log("server started");
 });
